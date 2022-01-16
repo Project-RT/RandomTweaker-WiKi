@@ -116,3 +116,9 @@ print(posOne.west(3).x); // 在这里会打印 -3
 print(posOne.east().x); // 不填参数默认偏移 1 格, 在这里会打印 1
 print(posOne.east(3).x); // 在这里会打印 3
 ```
+
+## 一个小细节
+
+在 `zs` 中, 负整数的类型不是 `int` (整型) 而是 `long` (长整型)
+
+解决方法也很简单 : `-10 as int` 即可转换为 `int` 类型
