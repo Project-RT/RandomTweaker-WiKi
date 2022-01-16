@@ -1,6 +1,6 @@
 # Chinese
 
-- [首页](content/README.md)
+- [首页](README.md)
 
 ## Internal
 
