@@ -1,12 +1,17 @@
 # Chinese
 
-- [首页](chinese/README.md)
+- [首页](content/README.md)
 
 ## Internal
 
-- [IProp](chinese/internal/IProp.md)
-- [IInputPattern](chinese/internal/IInputPattern.md)
+- [IProp](content/internal/IProp.md)
+- [IInputPattern](content/internal/IInputPattern.md)
+
+## Vanilla Expansion
+
+- [IItemStack Expansion](content/vanilla-expansion/iitemstack-expansion.md)
+- [IBlockPos Expansion](content/vanilla-expansion/iblockpos-expansion.md)
 
 ## ContentTweaker
 
-- [TileData](chinese/contenttweaker/TileData.md)
+- [TileData](content/contenttweaker/TileData.md)

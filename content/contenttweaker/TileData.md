@@ -6,7 +6,7 @@
 
 如果你想要声明变量或数组为此类型, 务必导包
 
-```zenscript
+```csharp
 import mods.randomtweaker.utils.ITileData;
 ```
 
@@ -24,7 +24,7 @@ import mods.randomtweaker.utils.ITileData;
 
 ## Example
 
-```zenscript
+```csharp
 //TileDataObj 在这里代表 TileData 类实例
 
 TileDataObj.data = {"test" : "testValue" as string};

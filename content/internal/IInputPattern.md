@@ -4,7 +4,7 @@
 
 ## Import
 
-```zenscript
+```csharp
 import mods.randomtweaker.utils.IInputPattern;
 ```
 
@@ -20,7 +20,7 @@ import mods.randomtweaker.utils.IInputPattern;
 
 此方法会返回自身, 也就是 `IInputPattern` 类实例
 
-```zenscript
+```csharp
 // 实际上 zs 并不支持 as string...
 
 inputPattern(pattern as string...);
@@ -32,7 +32,7 @@ inputPattern(pattern as string...);
 
 此方法会返回 IIngredient[][]
 
-```zenscript
+```csharp
 inputPatternGet(pattern as string[], mapping as IIngredient[string])
 ```
 
@@ -48,7 +48,7 @@ inputPatternGet(pattern as string[], mapping as IIngredient[string])
 
 ## Example
 
-```zenscript
+```csharp
 import mods.randomtweaker.utils.IInputPattern;
 
 // 下面介绍两种创建 IInputPattern 实例的方法

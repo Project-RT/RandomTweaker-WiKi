@@ -1,6 +1,6 @@
 # IProp
 
-此功能需在配置文件中将 `B:Prop` 修改为 `true` 才可开启
+此功能需在配置文件中将 `B:Prop` 修改为 `true` 才可使用
 
 此功能为 `CraftTweaker` 提供了一种全局 (可跨存档) 的数据存储方式, 由键值 (key-value) 对应存储, 其保存的位置位于 `.minecraft/rt.properties`
 
@@ -8,7 +8,7 @@
 
 如果你想使用此功能, 务必导包
 
-```zenscript
+```csharp
 import mods.randomtweaker.file.IProp;
 ```
 
@@ -22,18 +22,18 @@ import mods.randomtweaker.file.IProp;
 
 ## Example
 
-```zenscript
+```csharp
 import mods.randomtweaker.file.IProp;
 
 IProp.write("test", "testValue");
 print(IProp.read("test")); // 会打印 testValue
 print(IProp.getAllKeys()[0]); // 会打印 test
 
-//即使下次启动游戏时上述代码被删除了, rt.properties 的内容也不会被改变
+// 即使下次启动游戏时上述代码被删除了, rt.properties 的内容也不会被改变
 ```
 
 此时你的 `rt.properties` 应该是这样的
 
-```zenscript
+```csharp
 test=testValue
 ```
