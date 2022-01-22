@@ -15,3 +15,14 @@
 ## ContentTweaker
 
 - [TileData](content/contenttweaker/TileData.md)
+
+## Mod Expansion
+
+### FTB
+
+- [FTB Ultimine](content/mod-expansion/ftbultimine.md)
+
+### Thaumcraft
+
+- [Dream Journl](content/mod-expansion/dream-journl.md)
+- [Vanilla Expansion](content/mod-expansion/vanilla-expansion.md)

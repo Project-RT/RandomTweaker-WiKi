@@ -9,3 +9,5 @@
 `Vanilla Expansion` 中的内容为 `rt` 原生提供的 `CrT` 扩展, 无需添加额外 `Mod`
 
 `ContentTweaker` 中的内容为添加了 `ContentTweaker` 后的联动功能
+
+`Mod Expansion` 中的内容为添加了对应 `Mod` 之后 `rt` 所提供的功能
