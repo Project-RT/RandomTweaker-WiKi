@@ -18,11 +18,9 @@
 
 ## Mod Expansion
 
-### FTB
+- [FTB](content/mod-expansion/ftb/README.md)
+  - [FTB Ultimine](content/mod-expansion/ftb/ftbultimine.md)
 
-- [FTB Ultimine](content/mod-expansion/ftbultimine.md)
-
-### Thaumcraft
-
-- [Dream Journl](content/mod-expansion/dream-journl.md)
-- [Vanilla Expansion](content/mod-expansion/vanilla-expansion.md)
+- [Thaumcraft](content/mod-expansion/thaumcraft/README.md)
+  - [Dream Journl](content/mod-expansion/thaumcraft/dream-journl.md)
+  - [Vanilla Expansion](content/mod-expansion/thaumcraft/vanilla-expansion.md)
