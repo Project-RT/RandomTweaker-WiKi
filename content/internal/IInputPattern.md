@@ -10,7 +10,7 @@ import mods.randomtweaker.utils.IInputPattern;
 
 ## Global Function
 
-此类注册了两个全局函数供 `zs` 使用
+此类注册了两个全局函数供 `CrT` 使用
 
 全局函数意味着你可以直接调用这些函数
 

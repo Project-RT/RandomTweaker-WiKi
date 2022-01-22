@@ -2,7 +2,7 @@
 
 此类为 [IItemStack](https://docs.blamejared.com/1.12/en/Vanilla/Items/IItemStack) 的扩展类
 
-这也意味着 `IItemStack` 类实例可以直接使用此类的方法
+这意味着 `IItemStack` 类实例可以直接使用此类的方法
 
 ## Import
 

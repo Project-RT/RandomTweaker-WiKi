@@ -2,7 +2,7 @@
 
 此类为 [IBlockPos](https://docs.blamejared.com/1.12/en/Vanilla/World/IBlockPos) 的扩展类
 
-这也意味着 `IBlockPos` 类实例可以直接使用此类的方法
+这意味着 `IBlockPos` 类实例可以直接使用此类的方法
 
 ## Import
 
@@ -119,6 +119,6 @@ print(posOne.east(3).x); // 在这里会打印 3
 
 ## 一个小细节
 
-在 `zs` 中, 负整数的类型不是 `int` (整型) 而是 `long` (长整型)
+在 `CrT` 中, 负整数的类型不是 `int` (整型) 而是 `long` (长整型)
 
 解决方法也很简单 : `-10 as int` 即可转换为 `int` 类型
