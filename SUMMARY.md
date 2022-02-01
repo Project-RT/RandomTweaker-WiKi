@@ -19,8 +19,13 @@
 ## Mod Expansion
 
 - [FTB](content/mod-expansion/ftb/README.md)
-  - [FTB Ultimine](content/mod-expansion/ftb/ftbultimine.md)
+  - [FTB Ultimine](content/mod-expansion/ftb/ftbu/iplayer-expansion.md)
 
 - [Thaumcraft](content/mod-expansion/thaumcraft/README.md)
   - [Dream Journl](content/mod-expansion/thaumcraft/dream-journl.md)
   - [Vanilla Expansion](content/mod-expansion/thaumcraft/vanilla-expansion.md)
+
+- [Astral Sorcery](content/mod-expansion/astralsorcery/README.md)
+  - [IPlayer Expansion](content/mod-expansion/astralsorcery/iplayer-expansion.md)
+  - [Attunement Altar](content/mod-expansion/astralsorcery/attunement-altar.md)
+  - [Attunement Complete Event](content/mod-expansion/astralsorcery/event/attunement-complete-event.md)

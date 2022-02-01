@@ -17,8 +17,7 @@ import mods.randomtweaker.vanilla.IBlockPos;
 | 方法名 | 返回值类型 | 方法作用 |
 | :------ | ------ | ------ |
 | getAllInBox(from as IBlockPos, to as IBlockPos) | IBlockPos[] | 返回 `from` 参数到 `to` 参数范围内所有的 `IBlockPos` 对象的集合 |
-| add(x as double, y as double, z as double) | IBlockPos | 返回坐标偏移 `xyz` 参数后的新坐标 |
-| add(x as int, y as int, z as int) | IBlockPos | 同上 |
+| add(x as int, y as int, z as int) | IBlockPos | 返回坐标偏移 `xyz` 参数后的新坐标 |
 | up(@Optional n as int) | IBlockPos | 返回坐标向上偏移 `n` 个方块距离后的新坐标, 其中 `n` 默认为 `1` (可不填 `n` 参数) |
 | down(@Optional n as int) | IBlockPos | 返回坐标向下偏移 `n` 个方块距离后的新坐标, `n` 参数含义同上 |
 | north(@Optional n as int) | IBlockPos | 返回坐标向北偏移 `n` 个方块距离后的新坐标, `n` 参数含义同上 |
@@ -61,26 +60,11 @@ for pos in posCollection {
 */
 
 // 接下来是 add 方法
-// 有两个 add 方法, 一个接受整型 (int) 参数, 一个接受双精度浮点数 (double)
 
 var posOneAdded as IBlockPos = posOne.add(1, 1, 1); //调用接受整型的 add 方法
-var posTwoAdded as IBlockPos = posTwo.add(2.5D, 2.5D, 2.5D); //调用接受双精度浮点数的 add 方法
 
 // print 一下 add 后的结果
 print("PosOne Add 后的结果 : " ~ posOneAdded.x ~ "," ~ posOneAdded.y ~ "," ~ posOneAdded.z); // 会打印 PosOne Add 后的结果 : 1,1,1
-print("PosTwo Add 后的结果 : " ~ posTwoAdded.x ~ "," ~ posTwoAdded.y ~ "," ~ posTwoAdded.z); // 会打印 PosTwo Add 后的结果 : 3,3,3
-
-// 等一下, 为什么第二个 print 的结果也是整数坐标?
-// 这是因为 IBlockPos 存储的是整型数据, 所以最后拿到的 xyz 都是整数
-// 查看源码后, 我们得知接受双精度浮点数的 add 方法是这么 add 的
-// 拿 posTwoAdded 举例子
-// 首先 1 + 2.5 得到 3.5, 然后 3.5 向下取整得到 3
-// 所以坐标就变成了 3,3,3
-
-// 在这里, add 或以下方法都是创建新的 IBlockPos 对象, 而不是对原先的对象进行修改
-// 所以不要干这种蠢事 : 
-// posOne.add(2, 2, 2); // 这是创建新的 IBlockPos 对象
-// print("" ~ posOne.x ~ "," ~ posOne.y ~ "," ~ posOne.z); // 会打印 0,0,0 而不是 2,2,2
 
 //-----------------------------------------------
 

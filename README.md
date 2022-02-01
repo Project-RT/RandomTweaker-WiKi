@@ -10,4 +10,4 @@
 
 `ContentTweaker` 中的内容为添加了 `ContentTweaker` 后的联动功能
 
-`Mod Expansion` 中的内容为添加了对应 `Mod` 之后 `rt` 所提供的功能
+`Mod Expansion` 中的内容为添加了对应 `Mod` 之后所提供的功能

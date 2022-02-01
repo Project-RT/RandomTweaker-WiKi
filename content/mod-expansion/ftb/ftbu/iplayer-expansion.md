@@ -1,10 +1,12 @@
-# FTB Ultimine
+# IPlayer Expansion
 
 同样的, 此功能需要在配置文件中把 `B:AllowCrTControl` 改为 `true` 才可使用
 
 此类为 [IPlayer](https://docs.blamejared.com/1.12/en/Vanilla/Players/IPlayer) 类的扩展类, 这意味着 `IPlayer` 类实例可以直接使用此类的方法
 
 此功能为 `CrT` 提供了操纵连锁的接口, 现在 `CrT` 可以决定玩家能否连锁
+
+当玩家不能连锁时, 游戏界面左上角的 `HUD` 也不会显示
 
 ## Import
 
@@ -18,6 +20,7 @@ import mods.randomtweaker.ftbultimine.IPlayer;
 
 | 方法名 | 方法作用 |
 | :----- | ----- |
+| isAllowFTBUltimine() | 返回玩家能否连锁 |
 | setAllowFTBUltimine(flag as bool) | 决定玩家能否连锁 |
 
 ## Example
@@ -27,10 +30,10 @@ import mods.randomtweaker.ftbultimine.IPlayer;
 import crafttweaker.event.BlockBreakEvent; // 方块破坏事件
 
 events.onBlockBreak(function(event as BlockBreakEvent) {
-    if(!event.world.remote) { // 判断是否在服务端内
+    if(!event.world.remote && event.player.isAllowFTBUltimine()) { // 判断是否在服务端内且玩家能否连锁
         event.player.setAllowFTBUltimine(false); // 阻止玩家连锁
 
-        // 还有一个值得注意的是, 调用此方法后, 效果是永久的, 除非再次调用并传入 true, 否则该玩家永远无法连锁
+        // 值得注意的是, 调用此方法后, 效果是永久的, 除非再次调用并传入 true, 否则该玩家将永远无法连锁
     }
 });
 ```
