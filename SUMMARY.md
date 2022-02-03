@@ -28,4 +28,9 @@
 - [Astral Sorcery](content/mod-expansion/astralsorcery/README.md)
   - [IPlayer Expansion](content/mod-expansion/astralsorcery/iplayer-expansion.md)
   - [Attunement Altar](content/mod-expansion/astralsorcery/attunement-altar.md)
-  - [Attunement Complete Event](content/mod-expansion/astralsorcery/event/attunement-complete-event.md)
+  - [Attunement Start Event](content/mod-expansion/astralsorcery/event/attunement-start-event.md)
+  - [Attunement Recipe Complete Event](content/mod-expansion/astralsorcery/event/attunement-recipe-complete-event.md)
+
+- [Nature's aura](content/mod-expansion/naturesaura/README.md)
+  - [IWorld Expansion](content/mod-expansion/naturesaura/iworld-expansion.md)
+  - [IAura Chunk](content/mod-expansion/naturesaura/iaurachunk.md)
