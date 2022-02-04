@@ -42,7 +42,7 @@ events.onPlayerRightClickItem(function(event as PlayerRightClickItemEvent) {
 
         // 获取玩家坐标的灵气量
         var amount as int = auraChunk.getDrainSpot(pos);
-        print(amount); // 打印 0
+        print(amount); // 打印 0, 打印结果会因为各种因素改变, Example 仅供参考
     }
 });
 ```
