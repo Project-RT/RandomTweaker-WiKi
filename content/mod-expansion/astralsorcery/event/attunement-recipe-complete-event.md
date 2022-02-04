@@ -34,7 +34,7 @@ import mods.randomtweaker.astralsorcery.AttunementRecipeCompleteEvent;
 | setOutput(output as IItemStack) | void | 与 `output` Setter 一致 |
 | getWorld() | IWorld | 与 `world` Getter 一致 |
 | getConstellation() | string | 与 `constellation` Getter 一致 |
-| getAdditionalOutput() | List\<IItemStack> (可当 IItemStack[] 处理) | 获取额外输出的物品 |
+| getAdditionalOutput() | List\<IItemStack> (可当 [IItemStack] 处理) | 获取额外输出的物品 |
 | addAdditionalOutput(additionalOutput as IItemStack) | void | 添加额外输出的物品 |
 
 ## Example
