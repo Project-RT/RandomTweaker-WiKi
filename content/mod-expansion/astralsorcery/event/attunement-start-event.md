@@ -16,7 +16,7 @@ import mods.randomtweaker.astralsorcery.AttunementStartEvent;
 | :------ | ------ | ------ |
 | world | IWorld | 返回共鸣祭坛所处世界 |
 | constellation | string | 返回共鸣的星座 |
-| entity (此为 `IEntityEvent` 的 `Getter`) | IEntity | 与共鸣祭坛共鸣的实体 |
+| entity (此为 `IEntityEvent` 的 `Getter`) | IEntity | 返回与共鸣祭坛共鸣的实体 (有可能是物品实体也有可能是生物) |
 
 ## ZenMethod
 
@@ -28,5 +28,47 @@ import mods.randomtweaker.astralsorcery.AttunementStartEvent;
 ## Example
 
 ```csharp
+import crafttweaker.data.IData;
+import crafttweaker.world.IWorld;
+import crafttweaker.entity.IEntity;
+import crafttweaker.item.IItemStack;
+import crafttweaker.entity.IEntityItem;
+import mods.randomtweaker.astralsorcery.AttunementStartEvent; // 共鸣祭坛开始共鸣事件
 
+events.onAttunementStart(function(event as AttunementStartEvent) {
+    var world as IWorld = event.world; // 获取共鸣祭坛所在的世界
+    var entity as IEntity = event.entity; // 获取共鸣的实体
+    var constellation as string = event.constellation; // 获取共鸣的星座
+
+    // 保证实体为物品实体 (既然是物品实体, 那不是配方加上去的就是水晶石吧, 如果还有欢迎补充), 并判断共鸣的星座是否为非攻座
+    if(!world.remote && entity instanceof IEntityItem && constellation.contains("discidia")) {
+        var entityItem as IEntityItem = entity; // 强制转型为物品实体
+        var item as IItemStack = entityItem.item; // 获取物品实体里的 "物品"
+
+        // 判断是否为水晶石
+        if(<astralsorcery:itemrockcrystalsimple>.matches(item)) {
+            var nbt as IData = item.tag; // 拿到物品的 nbt
+
+            // 判断非 null, 可能有些多余, 毕竟正常情况的水晶石都带这个 nbt
+            if(!isNull(nbt.astralsorcery) && !isNull(nbt.astralsorcery.crystalProperties)) {
+                nbt = nbt.astralsorcery.crystalProperties; // 不解释, 请看下一章里 Example 的解释
+
+                // 经典判断非 null, 判断水晶石尺度是否大于 200
+                if(!isNull(nbt.size) && nbt.size.asInt() >= 200) {
+                    var sizeAdd as int = nbt.size.asInt()  + 100;
+
+                    // 判断 size 变量的值是否大于最大尺寸
+                    if(sizeAdd >= 400) {
+                        // 是的话就把 size 的值修改为当前 size 与 400 的差
+                        sizeAdd = 400 - nbt.size.asInt();
+                    }
+                    // nbt 操作, 添加尺寸
+                    // 先调用 mutable 方法使 IItemStack 可变
+                    // 再调用 updateTag 方法更新对应 nbt, 而不替换原来的 nbt
+                    item.mutable().updateTag({astralsorcery: {crystalProperties: {size: sizeAdd as int}}});
+                }
+            }
+        }
+    }
+});
 ```
