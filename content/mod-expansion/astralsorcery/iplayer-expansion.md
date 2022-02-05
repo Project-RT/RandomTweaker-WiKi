@@ -55,7 +55,7 @@ events.onPlayerRightClickItem(function(event as PlayerRightClickItemEvent) {
         print(exp); // 打印 158, 因为刚才 set 成了 158
 
         var constellation as string = player.getAttunedConstellation();
-        print(constellation); // 打印 discidia, 因为共鸣的星座为非攻座
+        print(constellation); // 打印 astralsorcery.constellation.discidia, 因为共鸣的星座为非攻座
 
         // 在这里, 我还解锁了解离座, 但未连线
         // 必须这样指定类型, 否则会报错
@@ -73,7 +73,7 @@ events.onPlayerRightClickItem(function(event as PlayerRightClickItemEvent) {
         for c in seenConstellation {
             print(c);
             // 打印 astralsorcery.constellation.discidia
-            // 和 astralsorcery.constellation.evorsio
+            // 和 astralsorcery.constellation.evorsio // 这个是解离座
         }
         
         // 在示例脚本里, 如果要验证此方法作用, 请把 setPerkExp 方法那行注释
