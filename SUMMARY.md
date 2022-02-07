@@ -34,3 +34,6 @@
 - [Nature's aura](content/mod-expansion/naturesaura/README.md)
   - [IWorld Expansion](content/mod-expansion/naturesaura/iworld-expansion.md)
   - [IAura Chunk](content/mod-expansion/naturesaura/iaurachunk.md)
+
+- [Botania](content/mod-expansion/botania/README.md)
+  - [IManaItemHandler](content/mod-expansion/botania/imanaitemhandler.md)
