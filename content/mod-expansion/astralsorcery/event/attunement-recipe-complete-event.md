@@ -76,11 +76,14 @@ events.onAttunementRecipeComplete(function(event as AttunementRecipeCompleteEven
 
             var nbt as IData = inputItem.nbt; // 拿到 nbt
 
+            // 在这里假设 inputItem 的 nbt 里有有 ForgeData 域且在这个域里有一个名为 special 的 key 和其对应的 value
+            // inputItem 是 IEntityItem 类型, 不是 IItemStack 类型
+            // 也就是说这是实体的 nbt, 不是物品的 nbt!!!!
             // 判断 nbt 里是否存在 ForgeData 这个 key, 如果不加判断, 可能会抛出错误, 比如经典的 NPE
             if(!isNull(nbt.ForgeData)) {
                 nbt = nbt.ForgeData; // 重定向 nbt 的域到 ForgeData, 重定向后 nbt 变量指向 inputItem.nbt.ForgeData
 
-                var special as IData = nbt.memberGet("special"); // 假设 inputItem 的 nbt 里有这个 key 和对应的 value
+                var special as IData = nbt.memberGet("special");
 
                 // 排除 special 是 null 的情况, 后把 special 转成 bool 类型 (1 是 true, 0 是 false)
                 if(!isNull(special) && special.asBool()) { 

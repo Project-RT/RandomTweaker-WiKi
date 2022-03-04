@@ -1,6 +1,6 @@
 # Attunement Start Event
 
-当共鸣开始时触发
+当共鸣开始时触发 (顺带一提, 这个事件是用来整活的!!)
 
 这个事件实现了 [IEntityEvent](https://docs.blamejared.com/1.12/en/Vanilla/Events/Events/IEntityEvent), 所以 `IEntityEvent` 事件的可用 `Getter` 此事件也可使用
 
@@ -35,6 +35,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.entity.IEntityItem;
 import mods.randomtweaker.astralsorcery.AttunementStartEvent; // 共鸣祭坛开始共鸣事件
 
+// 这个事件据目前定位来说, 只是为了整活
 events.onAttunementStart(function(event as AttunementStartEvent) {
     var world as IWorld = event.world; // 获取共鸣祭坛所在的世界
     var entity as IEntity = event.entity; // 获取共鸣的实体
@@ -53,19 +54,10 @@ events.onAttunementStart(function(event as AttunementStartEvent) {
             if(!isNull(nbt.astralsorcery) && !isNull(nbt.astralsorcery.crystalProperties)) {
                 nbt = nbt.astralsorcery.crystalProperties; // 不解释, 请看下一章里 Example 的解释
 
-                // 经典判断非 null, 判断水晶石尺度是否大于 200
+                // 经典判断非 null, 判断水晶石尺度是否大于等于 200
                 if(!isNull(nbt.size) && nbt.size.asInt() >= 200) {
-                    var sizeAdd as int = nbt.size.asInt()  + 100;
-
-                    // 判断 size 变量的值是否大于最大尺寸
-                    if(sizeAdd >= 400) {
-                        // 是的话就把 size 的值修改为当前 size 与 400 的差
-                        sizeAdd = 400 - nbt.size.asInt();
-                    }
-                    // nbt 操作, 添加尺寸
-                    // 先调用 mutable 方法使 IItemStack 可变
-                    // 再调用 updateTag 方法更新对应 nbt, 而不替换原来的 nbt
-                    item.mutable().updateTag({astralsorcery: {crystalProperties: {size: sizeAdd as int}}});
+                    // 生成一个爆炸, 参数解释在 CrT 官方文档上有说明
+                    world.performExplosion(null, entity.x, entity.y, entity.z, 1, false, false);
                 }
             }
         }

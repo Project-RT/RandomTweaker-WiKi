@@ -23,6 +23,7 @@ import mods.randomtweaker.astralsorcery.AttunementAltar;
 // 添加后自行查看 JEI
 // 这个名称可以通过 /as constellation playerName 再按个 tab 查看
 // 或者查看 mcmod 里的资料的英文名称, 需要全小写
+// 共鸣祭坛会优先匹配有星座的配方
 AttunementAltar.addRecipe(<minecraft:stick>, <minecraft:dirt>, "astralsorcery.constellation.discidia");
 AttunementAltar.addRecipe(<minecraft:dirt>, <minecraft:stick>);
 ```
