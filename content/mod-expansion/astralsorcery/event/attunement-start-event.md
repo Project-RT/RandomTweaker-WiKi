@@ -1,6 +1,6 @@
 # Attunement Start Event
 
-当共鸣开始时触发 (顺带一提, 这个事件是用来整活的!!)
+当共鸣开始时触发
 
 这个事件实现了 [IEntityEvent](https://docs.blamejared.com/1.12/en/Vanilla/Events/Events/IEntityEvent), 所以 `IEntityEvent` 事件的可用 `Getter` 此事件也可使用
 
@@ -35,7 +35,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.entity.IEntityItem;
 import mods.randomtweaker.astralsorcery.AttunementStartEvent; // 共鸣祭坛开始共鸣事件
 
-// 这个事件据目前定位来说, 只是为了整活
 events.onAttunementStart(function(event as AttunementStartEvent) {
     var world as IWorld = event.world; // 获取共鸣祭坛所在的世界
     var entity as IEntity = event.entity; // 获取共鸣的实体
