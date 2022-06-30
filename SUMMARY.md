@@ -36,4 +36,10 @@
   - [IAura Chunk](content/mod-expansion/naturesaura/iaurachunk.md)
 
 - [Botania](content/mod-expansion/botania/README.md)
+  - [ICocoonTotal](content/mod-expansion/botania/icocoon)
+    - [ICocoon](content/mod-expansion/botania/icocoon/icocoon.md)
+    - [ICocoonTileEntity](content/mod-expansion/botania/icocoon/icocoon-tile-entity.md)
+    - [DynamicSpawnTable](content/mod-expansion/botania/icocoon/dynamic-spawn-table.md)
   - [IManaItemHandler](content/mod-expansion/botania/imanaitemhandler.md)
+  - [IHydroangeas](content/mod-expansion/botania/subtile/ihydroangeas.md)
+  - [IOrechid](content/mod-expansion/botania/subtile/iorechid.md)
