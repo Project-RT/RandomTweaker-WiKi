@@ -10,8 +10,8 @@ import mods.jei.JEI;
 
 | 方法名| 返回值类型| 方法作用 |
 | :------ | ------ | ------ |
-| createJei(String uid, String title)| IJeiPanel | 创建jei界面 |
-| createJeiRecipe(String uid)| IJeiRecipe | 创建jei配方 |
+| createJei(uid as string, title as string)| IJeiPanel | 创建jei界面 |
+| createJeiRecipe(uid as string)| IJeiRecipe | 创建jei配方 |
 
 
 ## Example
