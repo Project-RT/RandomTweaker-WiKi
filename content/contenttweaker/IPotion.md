@@ -8,25 +8,16 @@
 import mods.randomtweaker.cote.IPotion;
 ```
 
-## ZenMethod
+## ZenProperty
 
-| Getter | 返回值类型 | 返回值描述 |
+| 字段 | 类型 | 描述 |
 | :------- | ------- | ------- |
-| instant | bool | 返回药水效果是即刻生效的还是持续生效的 (true 为即刻, false 为持续) |
-| badEffectIn | bool | 返回药水效果是否为不好的效果 |
-| beneficial | bool | 返回药水效果是否对玩家有益, 有益的药水会放在第一格 |
-| shouldRender | bool | 返回药水效果是否在背包栏渲染 |
-| shouldRenderHUD | bool | 返回药水效果是否在 HUD (在右上角) 渲染 |
+| instant | bool | 药水效果是即刻生效的还是持续生效的 (true 为即刻, false 为持续) |
+| badEffectIn | bool | 药水效果是否为不好的效果 |
+| beneficial | bool | 药水效果是否对玩家有益, 有益的药水会放在第一格 |
+| shouldRender | bool | 药水效果是否在背包栏渲染 |
+| shouldRenderHUD | bool | 药水效果是否在 HUD (在右上角) 渲染 |
 
-## ZenSetter
-
-| Setter | Setter 值类型 | Setter 功能描述 |
-| :--------- | --------- | --------- |
-| instant | bool | 更改药水效果是即刻生效的还是持续生效的 (true 为即刻, false 为持续) |
-| badEffectIn | bool | 更改药水效果是否为不好的效果 |
-| beneficial | bool | 更改药水效果是否对玩家有益, 有益的药水会放在第一格 |
-| shouldRender | bool | 更改药水效果是否在背包栏渲染 |
-| shouldRenderHUD | bool | 更改药水效果是否在 HUD (在右上角) 渲染 |
 
 ## Function
 
