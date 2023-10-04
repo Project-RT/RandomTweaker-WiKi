@@ -10,7 +10,7 @@ import mods.randomtweaker.jei.IJeiUtils;
 
 | 方法名| 返回值类型| 方法作用 |
 | :------ | ------ | ------ |
-| createBackground(width as int, height as int)| IJeiBackground | 创建背景(贴图为默认) |
+| createBackground(width as int, height as int)| IJeiBackground | 创建背景(贴图为默认randomtweaker:textures\gui\jei\jei_default.png) |
 | createBackground(u as int, v as int, width as int, height as int, resourceName as string)| IJeiBackground | 创建背景(贴图通过resourceName路径指定) |
 | createLiquidSlot(x as int, y as int, width as int, height as int, capacityMb as int, showCapacity as bool,isInput as bool,hasBase as bool(此参数可不写默认为true))| IJeiSlotLiquid | 创建流体槽位(参数见下讲解) |
 | createLiquidSlot(x as int, y as int, isInput as bool, hasBase as bool(此参数可不写默认为true))| IJeiSlotLiquid | 同上 |
@@ -26,7 +26,7 @@ import mods.randomtweaker.jei.IJeiUtils;
 | createLiquidElement(elementName as string, x as int, y as int, width as int, height as int)| IJeiElements | 创建流体元素，elementName为元素的id |
 | createFontInfoElement(info as string, x as int, y as int, color as int, width as int(可为空), height as int(可为空))| IJeiElements | 创建文字元素 |
 | createFontInfoElement(elementName as string, info as string, x as int, y as int, color as int, width as int(可为空), height as int(可为空))| IJeiElements | 创建文字元素，elementName为元素的id |
-| createArrowElement(x as int, y as int, direction as int)| IJeiElements | 创建箭头元素，direction 参数为四个箭头, 可填 0, 1, 2, 3 |
-| createArrowElement(elementName as string, x as int, y as int, direction as int)| IJeiElements | 创建箭头元素，direction 参数为四个箭头, 可填 0, 1, 2, 3，elementName为元素的id |
+| createArrowElement(x as int, y as int, direction as int)| IJeiElements | 创建箭头元素，direction 参数为四个箭头，方向依次为→ ← ↑ ↓, 可填 0, 1, 2, 3 |
+| createArrowElement(elementName as string, x as int, y as int, direction as int)| IJeiElements | 创建箭头元素，direction 参数为四个箭头, 可填 0, 1, 2, 3，方向依次为→ ← ↑ ↓，elementName为元素的id |
 | createImageElement(elementName as string, x as int, y as int, width as int, height as int, u as int, v as int,texture as string,  textureWidth as int, textureHeight as int)| IJeiElements | 创建图片元素，texture 的格式为 modid:path，elementName为元素的id |
-| createJeiManaBarElement(x as int, y as int, mana as int, mode as int(可为空))| IJeiElements | 创建魔力条元素，mana 为植物魔法魔力值，mode为1时填显示的魔力上限会缩小并显示缩小的倍数，不为1时上限为魔力池上限 |
+| createJeiManaBarElement(x as int, y as int, mana as int, mode as int(可为空))| IJeiElements | 创建魔力条元素，mana 为植物魔法魔力值，mode不为1时填显示的魔力上限会缩小并显示缩小的倍数，为1时上限为魔力池上限的十分之一（难道这个模式可读性不是更加好吗？ _(:з」∠)_） |
