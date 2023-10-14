@@ -51,3 +51,9 @@
   - [IHydroangeas](content/mod-expansion/botania/subtile/ihydroangeas.md)
   - [IOrechid](content/mod-expansion/botania/subtile/iorechid.md)
   - [SubTitles](content/contenttweaker/subtitles/README.md)
+
+- [JEI](content/mod-expansion/jei/README.md)
+  - [IJEI](content/mod-expansion/jei/jei.md)
+  - [IJEIPanel](content/mod-expansion/jei/jei-panel.md)
+  - [IJEIUtils](content/mod-expansion/jei/jei-utils.md)
+  - [IJEIRecipes](content/mod-expansion/jei/jei-recipes.md)
