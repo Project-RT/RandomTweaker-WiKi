@@ -14,7 +14,14 @@
 
 ## ContentTweaker
 
+- [IPotion](content/contenttweaker/IPotion.md)
 - [TileData](content/contenttweaker/TileData.md)
+- [SubTitles](content/contenttweaker/subtitles/README.md)
+  - [SubTileEntity](content/contenttweaker/subtitles/SubTileEntity.md)
+  - [SubTitles Functions](content/contenttweaker/subtitles/Function.md)
+  - [SubTileEntityInGame](content/contenttweaker/subtitles/ISubTileEntityGenerating.md)
+  - [ISubTileEntityGenerating](content/contenttweaker/subtitles/ISubTileEntityGenerating.md)
+  - [ISubTileEntityFunctional](content/contenttweaker/subtitles/ISubTileEntityFunctional.md)
 
 ## Mod Expansion
 
@@ -43,3 +50,4 @@
   - [IManaItemHandler](content/mod-expansion/botania/imanaitemhandler.md)
   - [IHydroangeas](content/mod-expansion/botania/subtile/ihydroangeas.md)
   - [IOrechid](content/mod-expansion/botania/subtile/iorechid.md)
+  - [SubTitles](content/contenttweaker/subtitles/README.md)
