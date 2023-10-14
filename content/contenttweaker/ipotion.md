@@ -30,12 +30,12 @@ import mods.randomtweaker.cote.IPotion;
 ## VanillaFactory
 
 ```csharp
-    var potion as IPotion = VanillaFactory.createPotion(unlocalizedName as string, liquidColorIn as int);
     /*
-    unlocalizedName为注册名，不可重复! 类型为string(不要傻傻的填 unlocalizedName)
-    liquidColorIn为药水颜色，例如0xF7D575
-    贴图位置 : contenttweaker:textures/gui/unlocalizedName.png
+        unlocalizedName为注册名，不可重复! 类型为string(不要傻傻的填 unlocalizedName)
+        liquidColorIn为药水颜色，例如0xF7D575
+        贴图位置 : contenttweaker:textures/gui/unlocalizedName.png
     */
+    var potion as IPotion = VanillaFactory.createPotion(unlocalizedName as string, liquidColorIn as int);
 ```
 
 ## Example
@@ -48,30 +48,32 @@ import mods.randomtweaker.cote.IPotion;
 import mods.contenttweaker.Player;
  
 var potion as IPotion = VanillaFactory.createPotion("lhhd", 0xF7D575);
-//贴图位置 : contenttweaker:textures/gui/(此处填药水注册id，事例中就该填lhhd).png
+//  贴图位置 : contenttweaker:textures/gui/(此处填药水注册id，事例中就该填lhhd).png
 potion.shouldRender = false;
 potion.shouldRenderHUD = false;
 potion.badEffectIn = false;
 potion.isReady = function(duration, amplifier) {
     if (duration % 20 == 0) {
         /*
-        意思为20t触发一次(20t为一秒)
-        也可以:
-        return duration % 20 == 0
+            意思为20t触发一次(20t为一秒)
+            也可以:
+            return duration % 20 == 0
         */
         return true;
     }
         return false;
 };
+
+/*
+    living 类型为 IEntityLivingBase 意为具有此药水效果的生命实体
+    amplifier为药水等级(int)，药水等级最低为0
+*/
 potion.performEffect = function(living, amplifier) {
     if(!living.world.remote && living instanceof Player) {
         var player as Player = living;
         player.sendChat("didiidid~~~");
     }
 };
-/*
-living 类型为 IEntityLivingBase 意为具有此药水效果的生命实体
-amplifier为药水等级(int)，药水等级最低为0
-*/
+
 potion.register();
 ```
