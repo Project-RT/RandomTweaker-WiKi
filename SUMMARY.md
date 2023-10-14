@@ -9,13 +9,13 @@
 
 ## Vanilla Expansion
 
-- [IItemStack Expansion](content/vanilla-expansion/iitemstack-expansion.md)
 - [IBlockPos Expansion](content/vanilla-expansion/iblockpos-expansion.md)
+- [IItemStack Expansion](content/vanilla-expansion/iitemstack-expansion.md)
 
 ## ContentTweaker
 
-- [IPotion](content/contenttweaker/IPotion.md)
-- [TileData](content/contenttweaker/TileData.md)
+- [IPotion](content/contenttweaker/ipotion.md)
+- [TileData](content/contenttweaker/utils/tiledata.md)
 - [SubTitles](content/contenttweaker/subtitles/README.md)
   - [SubTileEntity](content/contenttweaker/subtitles/subtile-entity.md)
   - [SubTitles Functions](content/contenttweaker/subtitles/subtile-functions.md)
