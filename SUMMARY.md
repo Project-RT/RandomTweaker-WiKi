@@ -17,11 +17,11 @@
 - [IPotion](content/contenttweaker/IPotion.md)
 - [TileData](content/contenttweaker/TileData.md)
 - [SubTitles](content/contenttweaker/subtitles/README.md)
-  - [SubTileEntity](content/contenttweaker/subtitles/SubTileEntity.md)
-  - [SubTitles Functions](content/contenttweaker/subtitles/Function.md)
-  - [SubTileEntityInGame](content/contenttweaker/subtitles/ISubTileEntityGenerating.md)
-  - [ISubTileEntityGenerating](content/contenttweaker/subtitles/ISubTileEntityGenerating.md)
-  - [ISubTileEntityFunctional](content/contenttweaker/subtitles/ISubTileEntityFunctional.md)
+  - [SubTileEntity](content/contenttweaker/subtitles/subtile-entity.md)
+  - [SubTitles Functions](content/contenttweaker/subtitles/subtile-functions.md)
+  - [SubTileEntityInGame](content/contenttweaker/subtitles/subtile-entity-generating.md)
+  - [ISubTileEntityGenerating](content/contenttweaker/subtitles/subtile-entity-generating.md)
+  - [ISubTileEntityFunctional](content/contenttweaker/subtitles/subtile-functions.md)
 
 ## Mod Expansion
 
